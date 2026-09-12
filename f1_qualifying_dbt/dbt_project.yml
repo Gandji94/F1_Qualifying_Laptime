@@ -1,0 +1,36 @@
+name: "f1_qualifying_dbt"
+version: "1.0.0"
+config-version: 2
+
+profile: "f1_qualifying_dbt"
+
+model-paths:
+  - "models"
+
+seed-paths:
+  - "seeds"
+
+test-paths:
+  - "tests"
+
+macro-paths:
+  - "macros"
+
+models:
+  f1_qualifying_dbt:
+
+    staging:
+      +schema: staging
+      +materialized: view
+
+    intermediate:
+      +schema: intermediate
+      +materialized: view
+
+    marts:
+      +schema: marts
+      +materialized: table
+
+    data_products:
+      +schema: data_products
+      +materialized: table

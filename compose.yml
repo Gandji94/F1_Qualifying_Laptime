@@ -1,0 +1,17 @@
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./model:/app/model
+      - ./f1_qualifying_dbt/seeds:/app/f1_qualifying_dbt/seeds
+
+  dbt:
+    build:
+      context: ./f1_qualifying_dbt
+      dockerfile: Dockerfile
+    volumes:
+      - ./f1_qualifying_dbt:/usr/app

@@ -1,0 +1,400 @@
+version: 2
+
+models:
+  - name: dp_f1_qualifying_results
+    description: "Cleaned Formula 1 qualifying results."
+
+    columns:
+      - name: Driver
+        description: "The name of the F1 driver."
+        data_tests:
+          - not_null
+        data_type: varchar
+
+      - name: Team
+        description: "The name of the F1 team."
+        data_tests:
+          - not_null
+        data_type: varchar
+
+      - name: GP
+        description: "The name of the F1 Grand Prix."
+        data_tests:
+          - not_null
+        data_type: varchar
+
+      - name: Rule_Era
+        description: "In which rule era was the lap generated"
+        data_tests:
+          - not_null
+        data_type: varchar
+
+      - name: AirTemp_p1
+        description: "The air temperatur in the first practice session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Humidity_p1
+        description: "The humidity level in the first practice session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Pressure_p1
+        description: "The pressure level in the first practice session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Rainfall_p1
+        description: "Binary indicator, if the session/time was under wet conditions in the first practice"
+        data_tests:
+          - non_negative
+          - accepted_values:
+              arguments:
+                values: [0,1]
+                quote: false
+        data_type: int
+
+      - name: laptime_sum_sectortimes_p1
+        description: "Fastest lap time of each driver in the first practice session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: LapTimeDiff_p1
+        description: "lap time difference between the fastest lap time compare to the others in the first practice session"
+        data_type: float
+
+      - name: Compound_p1
+        description: "Compound of each driver's fastest lap in the first practice"
+        data_type: varchar
+
+      - name: AirTemp_p2
+        description: "The air temperatur in the second practice session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Humidity_p2
+        description: "The humidity level in the second practice session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Pressure_p2
+        description: "The pressure level in the second practice session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Rainfall_p2
+        description: "Binary indicator, if the session/time was under wet conditions in the second practice"
+        data_tests:
+          - non_negative
+          - accepted_values:
+              arguments:
+                values: [0,1]
+                quote: false
+        data_type: int
+
+      - name: laptime_sum_sectortimes_p2
+        description: "Fastest lap time of each driver in the second practice session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: LapTimeDiff_p2
+        description: "lap time difference between the fastest lap time compare to the others in the second practice session"
+        data_type: float
+
+      - name: Compound_p2
+        description: "Compound of each driver's fastest lap in the second practice session"
+        data_type: varchar
+
+      - name: AirTemp_p3
+        description: "The air temperatur in the third practice session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Humidity_p3
+        description: "The humidity level in the third practice session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Pressure_p3
+        description: "The pressure level in the third practice session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Rainfall_p3
+        description: "Binary indicator, if the session/time was under wet conditions in the third practice"
+        data_tests:
+          - non_negative
+          - accepted_values:
+              arguments:
+                values: [0,1]
+                quote: false
+        data_type: int
+
+      - name: laptime_sum_sectortimes_p3
+        description: "Fastest lap time of each driver in the third practice session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: LapTimeDiff_p3
+        description: "lap time difference between the fastest lap time compare to the others in the third practice session"
+        data_type: float
+
+      - name: Compound_p3
+        description: "Compound of each driver's fastest lap in the third practice session"
+        data_type: varchar
+
+      - name: Sprint_Session
+        description: "The sprint qualifying session in which the driver has set his fastest time"
+        data_type: varchar
+      
+      - name: AirTemp_sprint_quali
+        description: "The air temperatur in the sprint qualifying session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Humidity_sprint_quali
+        description: "The humidity level in the sprint qualifying session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Pressure_sprint_quali
+        description: "The pressure level in the sprint qualifying session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Rainfall_sprint_quali
+        description: "Binary indicator, if the session/time was under wet conditions in the sprint qualifying session"
+        data_tests:
+          - non_negative
+          - accepted_values:
+              arguments:
+                values: [0,1]
+                quote: false
+        data_type: int
+
+      - name: laptime_sum_sectortimes_sprint_quali
+        description: "Fastest lap time of each driver in the sprint qualifying session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: LapTimeDiff_sprint_quali
+        description: "lap time difference between the fastest lap time compare to the others in the sprint qualifying session"
+        data_type: float
+
+      - name: Compound_sprint_quali
+        description: "Compound of each driver's fastest lap in the sprint qualifying session"
+        data_type: varchar
+
+      - name: Session
+        description: "The qualifying session in which the driver has set his fastest time"
+        data_type: varchar
+      
+      - name: AirTemp_quali
+        description: "The air temperatur in the qualifying session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Humidity_quali
+        description: "The humidity level in the qualifying session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Pressure_quali
+        description: "The pressure level in the qualifying session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: Rainfall_quali
+        description: "Binary indicator, if the session/time was under wet conditions in the qualifying session"
+        data_tests:
+          - non_negative
+          - accepted_values:
+              arguments:
+                values: [0,1]
+                quote: false
+        data_type: int
+
+      - name: laptime_sum_sectortimes_quali
+        description: "Fastest lap time of each driver in the qualifying session"
+        data_tests:
+          - non_negative
+        data_type: float
+
+      - name: LapTimeDiff_quali
+        description: "lap time difference between the fastest lap time compare to the others in the qualifying session"
+        data_type: float
+
+      - name: Compound_quali
+        description: "Compound of each driver's fastest lap in the qualifying session"
+        data_type: varchar
+
+      - name: Season
+        description: "The season in which the lap time was recorded"
+        data_tests:
+          - not_null
+        data_type: int
+
+      - name: Sprint_Race_Era
+        description: "In what sprint race are was the lap time recorded"
+        data_tests:
+          - not_null
+        data_type: varchar
+
+      - name: Sprint_Weekend
+        description: "Binary indicator if the race weekend is a sprint weekend"
+        data_tests:
+          - non_negative
+          - accepted_values:
+              arguments:
+                values: [0,1]
+                quote: false
+        data_type: int
+
+      - name: race_round
+        description: "Represents the chronological order of the grand prix in each season"
+        data_tests:
+          - not_null
+        data_type: int
+
+      - name: gp_id
+        description: "Represents the chronological order of the grand prix season overlapping"
+        data_tests:
+          - not_null
+        data_type: int
+
+      - name: Team_Lineage
+        description: "This represents the lineage of a team. It showcases a string with all the different teams names."
+        data_tests:
+          - not_null
+        data_type: varchar
+
+      - name: Type
+        description: "Either 'Race' or 'Street', it determines if it is a street or race circut race"
+        data_tests:
+          - not_null
+          - race_or_street
+        data_type: varchar
+
+      - name: Direction
+        description: "The direction of the F1 circute"
+        data_tests:
+          - not_null
+          - direction_circut
+        data_type: varchar
+
+      - name: Circut_length
+        description: "The length of the grand prix track in kilometers"
+        data_tests:
+          - not_null
+          - non_negative
+        data_type: float
+
+      - name: Turns
+        description: "Number of turns of each grand prix track"
+        data_tests:
+          - not_null
+          - non_negative
+        data_type: float
+
+      - name: Pace_profile
+        description: "Pace profile of each grand prix track"
+        data_tests:
+          - not_null
+          - pace_profile
+        data_type: varchar
+        
+      - name: Flat_out_run
+        description: "Output shows how long cars drive flat out on the circut. Time is meausred in seconds"
+        data_tests:
+          - not_null
+          - non_negative
+        data_type: int
+
+      - name: Slow_turns
+        description: "Number of slow-speed turn of each circut"
+        data_tests:
+          - not_null
+          - non_negative
+        data_type: int
+
+      - name: Medium_turns
+        description: "Number of medium-speed turn of each circut"
+        data_tests:
+          - not_null
+          - non_negative
+        data_type: int
+
+      - name: High_speed_turns
+        description: "Number of high-speed turn of each circut"
+        data_tests:
+          - not_null
+          - non_negative
+        data_type: int
+
+      - name: Turn_density
+        description: "Number of truns divided by the length of each circut"
+        data_tests:
+          - not_null
+          - non_negative
+        data_type: int
+
+      - name: Complexity_label
+        description: "Showcases the chracteristic complexity of each circut"
+        data_tests:
+          - not_null
+          - circut_complexity
+        data_type: varchar
+
+      - name: Qualifying_Date
+        description: "Date on which the Qualifying took place"
+        data_tests:
+          - not_null
+        data_type: date
+
+  - name: dp_f1_qualifying_prediction
+    description: "Cleaned Formula 1 qualifying results."
+
+    columns:
+      - name: Driver
+        description: "The name of the F1 driver."
+        data_tests:
+          - not_null
+        data_type: varchar
+
+      - name: Team
+        description: "The name of the F1 team."
+        data_tests:
+          - not_null
+        data_type: varchar
+      
+      - name: GP
+        description: "The name of the F1 Grand Prix."
+        data_tests:
+          - not_null
+        data_type: varchar
+      
+      - name: pred_corrected
+        description: "The predicted qualifying time of the model"
+        data_tests:
+          - not_null
+          - non_negative
+        data_type: float

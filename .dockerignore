@@ -1,0 +1,42 @@
+# Python byte-compiled / cache files
+__pycache__/
+*.py[cod]
+
+# Test cache
+.pytest_cache/
+
+# Virtual environments
+f1_venv/
+venv/
+.venv/
+
+# Environment files
+.env
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
+notebook/
+
+# FastF1 cache
+fastf1_cache/
+
+# IDEs
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# dbt generated files
+f1_qualifying_dbt/target/
+f1_qualifying_dbt/logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Project notes / temporary text files
+EDA_Descriptive_Analysis_Part_I.txt
+next_steps.txt

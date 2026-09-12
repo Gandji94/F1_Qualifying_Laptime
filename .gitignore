@@ -1,0 +1,28 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+f1_venv/
+venv/
+.venv/
+.env
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# FastF1 cache
+fastf1_cache/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Text files
+EDA_Descriptive_Analysis_Part_I.txt
+next_steps.txt

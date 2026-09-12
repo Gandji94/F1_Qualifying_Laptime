@@ -1,0 +1,36 @@
+GP,Type,Direction,Circut_length,Turns,Pace_profile,Flat_out_run,Slow_turns,Medium_turns,High_speed_turns,Turn_density,Complexity_label
+Australian GP,Street,Clockwise,5.28,16,High-speed ,1300,4,5,7,3.03,Balanced
+Portuguese GP,Race,Clockwise,4.65,15,High-speed ,1000,3,5,7,3.22,Balanced
+Emilia Romagna GP,Race,Anti-clockwise,4.91,19,Balanced ,1140,5,7,7,3.87,Very twisty
+Tuscan GP,Race,Clockwise,5.25,15,Very high-speed,1140,2,4,9,2.86,Flowing
+Brazilian GP,Race,Anti-clockwise,4.31,15,Balanced ,900,4,6,5,3.48,Twisty
+Italian GP,Race,Clockwise,5.79,11,Very high-speed,1200,4,4,3,1.9,Flowing
+Mexican GP,Race,Clockwise,4.3,17,Balanced ,1270,5,8,4,3.95,Very twisty
+Bahrain GP,Race,Clockwise,5.41,15,Balanced-high speed,1120,4,7,4,2.77,Flowing
+Azerbaijan GP,Street,Anti-clockwise,6.0,20,Low-speed ,2200,12,5,3,3.33,Twisty
+Canadian GP,Street,Clockwise,4.36,14,Balanced ,1050,6,6,2,3.21,Balanced
+French GP,Race,Clockwise,5.84,15,Balanced-high speed,1100,4,5,6,2.57,Flowing
+Dutch GP,Race,Clockwise,4.26,14,Balanced-high speed,680,2,6,6,3.29,Balanced
+Spanish GP,Race,Clockwise,4.66,14,Balanced,1047,4,6,4,3.01,Balanced
+Monaco GP,Street,Clockwise,3.34,19,Low-speed ,670,13,6,0,5.69,Very twisty
+Belgian GP,Race,Clockwise,7.0,20,High-speed ,1500,4,7,9,2.86,Flowing
+United States GP,Race,Anti-clockwise,5.51,20,Balanced,1000,5,8,7,3.63,Twisty
+German GP,Race,Clockwise,4.57,16,Balanced-high speed,1070,5,6,5,3.5,Twisty
+Hungarian GP,Race,Clockwise,4.38,14,Low-speed ,900,5,7,2,3.2,Balanced
+Turkish GP,Race,Anti-clockwise,5.34,14,High-speed ,720,2,6,6,2.62,Flowing
+Saudi Arabian GP,Street,Anti-clockwise,6.17,27,Very high-speed,1050,3,7,17,4.37,Very twisty
+Las Vegas GP,Street,Anti-clockwise,6.2,17,Low-speed ,1900,10,5,2,2.74,Flowing
+Qatar GP,Race,Clockwise,5.42,16,Very high-speed,1060,2,5,9,2.95,Balanced
+Madrid GP,Street,Clockwise,5.47,22,Mixed ,900,10,8,4,4.02,Very twisty
+Singapore GP,Street,Anti-clockwise,4.94,19,Low-speed ,830,10,7,2,3.85,Very twisty
+Miami GP,Street,Anti-clockwise,5.41,19,Balanced ,1310,7,8,4,3.51,Twisty
+Eifel GP,Race,Clockwise,5.15,15,Balanced,620,4,7,4,2.91,Balanced
+Austrian GP,Race,Clockwise,4.32,10,Balanced-high speed,900,3,3,4,2.32,Flowing
+Chinese GP,Race,Clockwise,5.45,16,Balanced-high speed,1170,4,7,5,2.94,Balanced
+British GP,Race,Clockwise,5.89,18,Very high-speed,770,3,6,9,3.06,Balanced
+Russian GP,Race,Clockwise,5.85,15,Low-speed ,850,6,6,3,2.56,Flowing
+Japanese GP,Race,Figure-eight,5.81,18,Very high-speed,1200,2,7,9,3.1,Balanced
+Abu Dhabi GP,Race,Anti-clockwise,5.28,16,Balanced-high speed,1120,5,6,5,3.03,Balanced
+Sakhir GP,Race,Clockwise,5.41,15,Balanced-high speed,1120,4,7,4,2.77,Flowing
+Styrian GP,Race,Clockwise,4.32,10,Balanced-high speed,900,3,3,4,2.32,Flowing
+70th Anniversary GP,Race,Clockwise,5.89,18,Very high-speed,770,3,6,9,3.06,Balanced

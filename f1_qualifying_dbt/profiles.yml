@@ -1,0 +1,9 @@
+f1_qualifying_dbt:
+  target: dev
+
+  outputs:
+    dev:
+      type: duckdb
+      path: /usr/app/data/f1_qualifying.duckdb
+      schema: main
+      threads: 4
