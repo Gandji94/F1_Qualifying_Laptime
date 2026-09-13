@@ -119,7 +119,9 @@ def eval_final_model_w_offset():
             )
         )
 
-        print(f"Best shrinking: {best_shrinking:.2f}")
+        best_shrink_val = np.round(best_shrinking,2)
+        print(f"Best shrinking: {best_shrink_val}")
+        joblib.dump(best_shrink_val,MODEL_OFFSET/'best_shrinking_val.joblib')
         print(shrinking_results.head(100))
 
         df_offset_pred = off_train_X_test.copy()

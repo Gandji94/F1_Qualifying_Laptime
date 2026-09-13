@@ -181,7 +181,8 @@ def making_predictions(
         df_quali["team_offset"] = (df_quali["Team"].map(team_offset).fillna(global_gp_offset))
         df_quali['gp_global_offset'] = global_gp_offset
         df_quali['offset'] = df_quali[['driver_offset','team_offset','gp_global_offset']].mean(axis=1)
-        df_quali = def_apply_offset_mean(df=df_quali,pred='Pred_time',shrinking=0.55)
+        best_shrinking_val = joblib.load(MODEL_OFFSET/'best_shrinking_val.joblib')
+        df_quali = def_apply_offset_mean(df=df_quali,pred='Pred_time',shrinking=best_shrinking_val)
         prediction_output = (df_quali[["Driver", "Team", "GP", "pred_corrected"]].sort_values(["GP", "pred_corrected"],ascending=[True, True],).reset_index(drop=True))
         prediction_output.to_csv(MODEL_PRED/'2026_qualifying_predictions.csv',index=False)
         prediction_output.to_csv(DATA_DBT_OUTPUT/'2026_qualifying_predictions.csv',index=False)
