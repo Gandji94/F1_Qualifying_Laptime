@@ -26,7 +26,7 @@ def making_predictions(
     import joblib
     import logging
     from pathlib import Path
-    from .py_def_class import Add_Column,RFPermutationRegressorSelector,GroupTimeSplit,previous_stage_param_range,group_time_learning_curve,CastColumnsToObject,abandoned_lap,inspect_quali_time_distribution,f1_rule_era,get_sprint_session_name,build_session_paths,pick_quali_boundaries,practice_quali_new_pred,def_apply_offset_mean,tune_offset_shrinkage_expanding,df_for_prediction
+    from ..py_def_class import Add_Column,RFPermutationRegressorSelector,GroupTimeSplit,previous_stage_param_range,group_time_learning_curve,CastColumnsToObject,abandoned_lap,inspect_quali_time_distribution,f1_rule_era,get_sprint_session_name,build_session_paths,pick_quali_boundaries,practice_quali_new_pred,def_apply_offset_mean,tune_offset_shrinkage_expanding,df_for_prediction
 
     #setting up paths
     PROJECT_ROOT = Path(__file__).resolve().parent.parent

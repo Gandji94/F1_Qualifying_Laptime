@@ -135,7 +135,7 @@ The individual commands make it easier to see where a problem occurs. Run them i
 .\.venv\Scripts\python.exe -m src.main fitting_final_model
 .\.venv\Scripts\python.exe -m src.main eval_final_train_test_model
 .\.venv\Scripts\python.exe -m src.main eval_final_model_w_offset
-.\.venv\Scripts\python.exe -m src.main making_predictions
+.\.venv\Scripts\python.exe -m src.main making_prediction_
 ```
 
 | Step | What it does |
@@ -144,7 +144,7 @@ The individual commands make it easier to see where a problem occurs. Run them i
 | `fitting_final_model` | Fits the final pipeline using saved LightGBM parameters and the combined training/testing dataset. The current code explicitly selects LightGBM. |
 | `eval_final_train_test_model` | Evaluates the fitted final model on the later holdout data. |
 | `eval_final_model_w_offset` | Calculates and evaluates corrections for systematic prediction errors, saving driver, team, and global offsets. |
-| `making_predictions` | Builds prediction inputs, loads the fitted model and offsets, and exports corrected predictions. |
+| `making_prediction_` | Builds prediction inputs, loads the fitted model and offsets, and exports corrected predictions. |
 
 Prediction pauses at `Please enter Compound:`. Enter the intended tyre compound using the categories in your data, for example `SOFT`, and press Enter. The supplied value applies to all rows in that prediction run.
 

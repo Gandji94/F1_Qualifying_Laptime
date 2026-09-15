@@ -78,16 +78,38 @@ def eval_final_model_w_offset():
         print(f"Season used for calculating the Offset: {current_season}")
         df_2026 = df[df['Season'].eq(current_season)]
 
-        #here we make sure that we only use a portion of the hold out to get the offsets
-        #the rest will be used to to see if the off set helps to improve
-        offset_gp_id = np.sort(df_2026['gp_id'].unique())[:5]
-        test_offset = np.sort(df_2026['gp_id'].unique())[5:]
+        gps = np.sort(df_2026["gp_id"].unique())
+        available_gps = len(gps)
 
-        offset_train_df = df[df['gp_id'].isin(offset_gp_id)]
+        if available_gps <= 5:
+            logging.info(
+                f"Only {available_gps} GPs available. "
+                "At least 6 are required."
+            )
+            return
+
+        frac = 0.60
+
+        offset_length = max(
+            5,
+            int(np.ceil(available_gps * frac))
+        )
+
+        # Keep at least one GP for evaluation
+        offset_length = min(
+            offset_length,
+            available_gps - 1
+        )
+
+        offset_gp_id = gps[:offset_length]
+        test_offset = gps[offset_length:]
+
+
+        offset_train_df = df_2026[df_2026['gp_id'].isin(offset_gp_id)]
         off_train_X_train = offset_train_df.drop(['Session','LapTimeDiff_quali','laptime_sum_sectortimes_quali'],axis=1)
         off_train_y_train = offset_train_df['laptime_sum_sectortimes_quali']
 
-        offset_test_df = df[df['gp_id'].isin(test_offset)]
+        offset_test_df = df_2026[df_2026['gp_id'].isin(test_offset)]
         off_train_X_test = offset_test_df.drop(['Session','LapTimeDiff_quali','laptime_sum_sectortimes_quali'],axis=1)
         off_train_y_test = offset_test_df['laptime_sum_sectortimes_quali']
 

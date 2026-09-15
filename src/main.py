@@ -3,7 +3,8 @@ from .all_model_training import all_model_training
 from .eval_final_model_w_offset import eval_final_model_w_offset
 from .eval_final_train_test_model import eval_final_train_test_model
 from .fitting_final_model import fitting_final_model
-from .making_predictions import making_predictions
+from .archive.making_predictions import making_predictions
+from .make_prediction_ import make_prediction_
 #from .tests.pipeline_test import pipeline_test
 from .quali_time_cleaning import quali_time_cleaning
 from .retraining_final_model import retraining_final_model
@@ -69,7 +70,7 @@ def parse_args():
     )
 
     subparsers.add_parser(
-        'making_predictions',
+        'make_prediction_',
         help='Making predictions with the final model'
     )
 
@@ -115,8 +116,8 @@ def main():
         eval_final_model_w_offset()
     elif args.command == 'retraining_final_model':
         retraining_final_model()
-    elif args.command == 'making_predictions':
-        making_predictions(df_filter=None)
+    elif args.command == 'make_prediction_':
+        make_prediction_(df_filter=None)
     elif args.command == 'data_drift':
         data_drift(season_ahead=2)
     elif args.command == 'feature_impact_on_pred_shap':
@@ -129,6 +130,7 @@ def main():
         eval_final_train_test_model()
         eval_final_model_w_offset()
         making_predictions(df_filter=None)
+        make_prediction_()
     elif args.command == "full_run":
         quali_time_cleaning()
         train_test_split()
@@ -137,6 +139,7 @@ def main():
         eval_final_train_test_model()
         eval_final_model_w_offset()
         making_predictions(df_filter=None)
+        make_prediction_()
 
 if __name__ == '__main__':
     main()
@@ -150,7 +153,7 @@ if __name__ == '__main__':
 ##python -m src.main eval_final_train_test_model
 ##python -m src.main eval_final_model_w_offset
 ##python -m src.main retraining_final_model
-##python -m src.main making_predictions
+##python -m src.main making_prediction_
 ##python -m src.main data_drift
 ##python -m src.main final_model_run
 ##python -m src.main full_run
